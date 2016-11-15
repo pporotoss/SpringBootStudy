@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 import org.springframework.stereotype.Component;
 
+import com.example.app.Argument;
+import com.example.app.ArgumentResolver;
+
 @Component
 public class ScannerArgumentResolver implements ArgumentResolver{
 
