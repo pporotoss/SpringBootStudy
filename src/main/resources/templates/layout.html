@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Layout</title><!-- title태그 안의 내용은 각 문서의 title태그의 내용으로 대체된다. 각 문서가 title태그를 명시하지 않으면 기본값으로 현재 내용이 표시. -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+				th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+				th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap-theme.min.css}" />
+</head>
+<body>
+	<div class="container">
+		<h1>고객 관리 시스템</h1>
+		<div layout:fragment="content">
+		Fake Content!!
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+</body>
+</html>

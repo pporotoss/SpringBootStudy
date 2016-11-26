@@ -43,8 +43,8 @@ public class CustomerRestController {
 	public ResponseEntity<Customer> postCustomers(@RequestBody Customer customer, UriComponentsBuilder uriBuilder) {
 		Customer created = customerService.create(customer);
 		
-		URI location = uriBuilder.path("api/customers/{id}")
-											.buildAndExpand(created.getId()) // path() 메서드에 있는 플레이스홀더의 값을 설정.
+		URI location = uriBuilder.path("api/customers/{id}")	// 경로 설정.
+											.buildAndExpand(created.getId()) // path() 메서드에 있는 플레이스홀더 값을 설정.
 											.toUri();	// path() 메서드에 지정한 경로로 URI 생성.
 		
 		HttpHeaders headers = new HttpHeaders();	// Http 응답 헤더 생성.
